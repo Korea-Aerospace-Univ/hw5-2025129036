@@ -10,7 +10,7 @@ int main() {
 
     for (int a = 1; a <= N / 900; a++) {
 
-        for (int b = 2; b <= N / 750; b = b + 2) { // B 짝수
+        for (int b = 2; b <= N / 750; b = b + 2) { 
 
             for (int c = 1; c <= N / 200; c++) {
 
