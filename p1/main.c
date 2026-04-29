@@ -2,41 +2,24 @@
 
 int main() {
 
-    int N;
+    int n, noway = 0;
 
-    int found = 0;
+    scanf("%d", &n);
 
-    scanf("%d", &N);
-
-    for (int a = 1; a <= N / 900; a++) {
-
-        for (int b = 2; b <= N / 750; b = b + 2) { 
-
-            for (int c = 1; c <= N / 200; c++) {
-
-                if (900*a + 750*b + 200*c == N) {
-
-                    if (c < a && c < b) {
-
+    for (int a = 1; 900*a <= n; a++) {
+        for (int b = 2; 750*b <= n; b += 2) { 
+            for (int c = 1; 200*c <= n; c++) {
+                if (900*a + 750*b + 200*c == n) {
+                    if (c < a || c < b) {
                         printf("%d %d %d\n", a, b, c);
-
-                        found = 1;
-
+                        noway = 1;
                     }
-
                 }
-
             }
-
         }
-
     }
-
-    if (found == 0) {
-
+    if (noway == 0) {
         printf("none\n");
-
     }
-
     return 0;
 }
