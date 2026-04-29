@@ -2,8 +2,8 @@
 
 int main() {
 
-    int n, noway = 0;
-
+    int n;
+    bool noway = false;
     scanf("%d", &n);
 
     for (int a = 1; 900*a <= n; a++) {
@@ -12,13 +12,13 @@ int main() {
                 if (900*a + 750*b + 200*c == n) {
                     if (c < a || c < b) {
                         printf("%d %d %d\n", a, b, c);
-                        noway = 1;
+                        noway = true;
                     }
                 }
             }
         }
     }
-    if (noway == 0) {
+    if (!noway) {
         printf("none\n");
     }
     return 0;
