@@ -16,7 +16,7 @@ int main() {
 
                 if (900*a + 750*b + 200*c == N) {
 
-                    if (c < a || c < b) {
+                    if (c < a && c < b) {
 
                         printf("%d %d %d\n", a, b, c);
 
